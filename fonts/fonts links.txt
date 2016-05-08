@@ -1,4 +1,0 @@
-@import url(httpsfonts.googleapis.comcssfamily=Roboto+Slab);
-@import url(httpsfonts.googleapis.comcssfamily=Kaushan+Script);
-@import url(httpsfonts.googleapis.comcssfamily=Montserrat400,700);
-@import url(httpsfonts.googleapis.comcssfamily=Droid+Serif400,400italic);
