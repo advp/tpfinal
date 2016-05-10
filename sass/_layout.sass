@@ -3,10 +3,11 @@
 /***********************************/
 .container
 	font-family: $main-font
+	margin: 20px auto
+	max-width: 1200px
 
 body
 	font-family: $main-font
-
 
 /*************************************/
 /*=========     HEADER     =========*/
@@ -32,6 +33,7 @@ body
 			background-color: $main-color !important
 
 	.navbar-nav
+		margin-top: 30px
 		> li
 			> a
 				font-family: $main-font
@@ -49,7 +51,6 @@ body
 /*************************************/
 /*=========     BANNER     =========*/
 /***********************************/
-
 #banner
 	background: url(../img/banner/05.jpg) center center/cover
 
@@ -78,13 +79,14 @@ video
 			&:focus
 				color: $main-color !important
 
-
+/************************************/
+/*=========     ABOUT     =========*/
+/**********************************/
 
 /***************************************/
 /*=========     SERVICES     =========*/
 /*************************************/
 #servicios
-
 	.img-services
 		display: inline-block
 		height: 50px
@@ -103,12 +105,14 @@ video
 /****************************************/
 /*=========     PORTFOLIO     =========*/
 /**************************************/
-
 .img-portfolio
 	+b-ra(10%)
+	+b-sh(0px, 0px, 10px, $main-color)
+	border: solid 2px $main-color
+	overflow: hidden	
 
 .portfolio-item
-	margin: 0 auto 40px
+	margin: 20px auto 40px
 	max-width: 400px
 
 	figure
@@ -136,12 +140,124 @@ video
 				opacity: 1
 				span
 					transform: translate(-50%,-50%) scale(1)
+	
+/***********************************/
+/*=========     TEAM     =========*/
+/*********************************/
+.team-img
+	border: solid 2px $main-color
+	+b-sh(0px, 0px, 10px, $main-color)
+	+b-ra(50%)
+	overflow: hidden
+	width: 225px
+	height: 225px
+	margin: 20px auto
 
+.icons
+	padding-bottom: 20px
+	i							
+		+b-ra(50%)
+		overflow: hidden
+		background-color: $main-color
+		color: white
+		font-size: 14px		
+		padding: 8px
+		margin: 0 8px
+		overflow: hidden
+		text-align: center	
 
-/*=========     MODAL     =========*/
+/**************************************/
+/*=========     CONTACT     =========*/
+/************************************/
+#contacto	
+	input,textarea,button
+		width: 95%	
+		border: solid 1px $main-color
+		+b-sh(0px, 0px, 5px, $main-color)
+		+b-ra(5px)
+		display: block
+		height: 50px		
+		padding: 10px	
+		margin: 20px auto 0	
+		font-style: inherit
+	button
+		border: none		
+		background-color: $main-color
+		color: white
+		width: 40%
+		margin: auto
+	textarea
+		height: 150px
+	form
+		p
+			padding: 20px
+	
+.map
+	position: relative
+	width: 95%	
+	height: 360px
+	padding: 0
+	margin: 20px auto
 
+	// la etiqueta iframe nos permite insertar contenido externo, por ejemplo, en este caso un mapa de google
+	iframe
+		border: solid 1px $main-color
+		+b-sh(0px, 0px, 5px, $main-color)
+		+b-ra(5px)
+		width: 100%	
+		height: 100%
+		overflow: hidden
+		line-height: 0
+		position: absolute
+		right: 0
+		top: 0
+		float: left
+		text-align: center
+
+	// este div está sobre el iframe y cumple la función de evitar el "zoom-in" y "zoom-out" del google map
+	div
+		position: absolute
+		right: 0
+		top: 0
+		width: 100%
+		height: 100%
+
+/************************************/
+/*=========     FOOTER     =========*/
+/************************************/
+#footer
+	height: 100%
+	padding: 0px
+	background-color: $third-color
+	p
+		padding-top: 10px
+		color: $main-color	
+
+	.container
+		position: relative
+
+	.img-services
+		display: inline-block
+		height: 50px
+
+	.logo
+		margin-top: 40px
+		position: absolute
+		left: 0
+		top: 0
+		float: left
+
+	.icons
+		margin-top: 20px
+		color: $second-color
+
+/************************************/
+/*=========     MODAL      =========*/
+/************************************/
 .modal
 	.modal-body
+		max-width: 50vw		/*MB El ancho será el 100% del viewport*/
+		max-height: 85vh	/*MB El alto será el 100% del viewport*/
 		img
 			margin: 0 auto
 			+b-ra(10%)
@@ -156,23 +272,3 @@ video
 			background-color: $main-color
 		&:hover
 			color: black
-
-/************************************/
-/*=========     ABOUT     =========*/
-/**********************************/
-
-
-/***********************************/
-/*=========     TEAM     =========*/
-/*********************************/
-
-
-/**************************************/
-/*=========     CONTACT     =========*/
-/************************************/
-
-
-
-/************************************/
-/*=========     FOOTER     =========*/
-/************************************/
